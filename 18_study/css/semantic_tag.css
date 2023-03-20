@@ -1,0 +1,19 @@
+body {
+   background-color:cornflowerblue;
+}
+
+header, nav, main, article, section, aside,footer, div {
+   border: 1px solid rgb(25, 0, 255);
+   margin: 10px auto;
+   background-color: aliceblue;
+   width: 80%;
+}
+
+p {
+   margin: 10px;
+}
+
+.area_title {
+   color:hotpink;
+   font-weight: 700;
+}

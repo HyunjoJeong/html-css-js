@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>표 만들기</title>
+   <link rel="stylesheet" href="css/표.css">
+</head>
+<body>
+   <h1>
+      표 만들기
+   </h1>
+   <table id="table1">
+      <caption>제목</caption>
+      <thead>
+         <tr>
+            <th>분류1</th>
+            <th>분류2</th>
+            <th>분류3</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>값 1</td>
+            <td>값 2</td>
+            <td rowspan="2">값 3</td>       <!-- rowspan을 이용해 열 합치기 -->
+         </tr>
+         <tr>
+            <td>값 4</td>
+            <td>값 5</td>
+         </tr>
+      </tbody>
+      <tfoot>
+         <tr>
+            <td colspan="3">요약</td>        <!-- colspan을 이용해 행 합치기 -->
+         </tr>
+      </tfoot>
+   </table>
+   <table>
+      <caption>column별로 꾸밀려면</caption>
+      <colgroup>                             <!-- colgroup을 이용해 각 column별로 css를 입힐 수 있음. 반드시 caption 바로 다음에 와야함. -->
+         <col>
+         <col style="background-color: aquamarine;">
+         <col id="beige">
+         <col>      <!-- 따로 스타일이 없어도 column 수만큼 <col>을 입력해준다.-->
+      </colgroup>
+      <tr>
+         <th>분류 1</th>
+         <td>값 1</td>
+         <td>값 2</td>
+         <td>값 3</td>
+      </tr>
+      <tr>
+         <th>분류 2</th>
+         <td>값 1</td>
+         <td>값 2</td>
+         <td>값 3</td>
+      </tr>
+   </table>
+</body>
+</html>

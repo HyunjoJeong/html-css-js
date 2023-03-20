@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>목록 만들기</title>
+   <link rel="stylesheet" href="css/목록.css">
+</head>
+<body>
+   <h1>
+      목록 만들기
+   </h1>
+   <div id="ordered_list">
+      <h3>
+         ordered list
+      </h3>
+      <p>type 속성과 start 속성을 사용 가능하다.<br>
+      type 속성의 값으로는 "1", "a", "A", "i", "I" 가 가능하며,<br>
+      start 속성은 시작할 값을 숫자로 입력한다. ex: type이 A 이고 start가 3이면 C 부터 시작.
+      </p>
+      <ol type="A" start="3">
+         <li>C부터 시작했지롱</li>
+         <li>이젠 D 겠죠?</li>
+      </ol>
+   </div>
+   <div id="unordered_list">
+      <h3>
+         unordered list
+      </h3>
+      <ul>
+         <li>이건</li>
+         <li>순서가 없는 리스트</li>
+         <li>css를 이용해 불릿 모양을 바꿈~</li>
+      </ul>
+   </div>
+   <div id="description_list">
+      <h3>
+         description list
+      </h3>
+      <dl>
+         <dt>name1</dt>
+            <dd>value1_1</dd>
+            <dd>value1_2</dd>
+         <dt>name2</dt>
+            <dd>value2_1</dd>
+            <dd>value2_2</dd>
+      </dl>
+      <p>dt가 이름 부분을 지정하고 dd로 값(설명)을 지정한다.</p>
+   </div>
+
+</body>
+</html>
