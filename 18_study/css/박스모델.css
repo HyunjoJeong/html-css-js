@@ -1,0 +1,50 @@
+#content-box {
+   width: 50%;    /*div 영역(p의 부모 영역)의 50%가 됨 */
+   font-size: larger;
+   border: solid blue 100px;
+   margin: 1px 5px;
+   padding: 20px;
+}
+
+#border-box {
+   box-sizing: border-box;    /*박스 모델을 기본(content-box)에서 border-box로 전환*/
+   width: 50%;
+   font-size: larger;
+   border: solid blue 100px;
+   margin: 1px 5px;
+   padding: 20px;
+}
+
+#outer_border-box {
+   box-sizing: border-box;    /*박스 모델을 기본(content-box)에서 border-box로 전환*/
+   border: solid brown 10px;
+   padding: 50px
+}
+
+div {
+   margin: 20px;
+   border: 1px solid black;
+   border-radius: 5px;
+   padding: 20px
+}
+
+#shadow {
+   box-shadow: 5px 5px 5px 2px black;
+   border: 1px solid black;
+   border-radius: 5px;
+   padding: 20px;
+}
+
+#borderwidth {
+   padding: 10px;
+   border: solid black;
+   border-width: 10px 5px 20px 5px;
+}
+
+#borderradius {
+   border: 3px solid black;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 20px;
+   border-bottom-left-radius: 3px;
+}

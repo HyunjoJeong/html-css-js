@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+@font-face {
+   font-family: 'Ostrich';    /* 폰트 이름 */
+   src: local('Ostrich Sans'),   /* local 문을 이용해 사용자의 pc에 해당 글꼴이 있는지 확인*/
+         url('../fonts/ostrich-sans-bold.woff') format('woff'),   /* 파일 하나만 해도 되긴 함, 근데 혹시 브라우저마다 지원하는 게 다르니 여러개.. 그리고 woff 파일이 제일 가벼워서 얘부터 입력. */
+         url('../fonts/ostrich-sans-bold.ttf') format('truetype'),
+         url('../fonts/ostrich-sans-bold.svg') format('svg');
+}
+
+.wfont {
+   font-family: 'Ostrich';
+}
+
+.googlefont {
+   font-family: 'Nanum Pen Script';
+}
+
+div {
+   border: 2px solid black;
+   margin: 10px auto;
+   padding: 10px;
+}
+body {
+   font-size: x-large;
+   font-weight: 600;
+}
+.궁서체 {
+   font-family : "궁서체";
+}
+.파란색 {
+   color: blue;
+}
+.italic {
+   font-style: italic;
+}
+.굵게 {
+   font-weight: 900;
+}
+table {
+   caption-side: bottom; /*제목 위치를 아래로*/
+   border: 5px solid royalblue;
+   padding: 2px;
+   border-collapse: collapse;
+   /* border-spacing: 20px; */
+}
+td, th {
+   border-color: grey;
+   border-width: 3px;
+   border-style: dotted;
+   padding: 10px;
+   min-width: 100px;
+   min-height: 50px;
+   text-align: center;
+}
+th {
+   background-color: beige;
+}

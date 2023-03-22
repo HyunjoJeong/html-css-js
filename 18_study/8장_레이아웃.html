@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>레이아웃 관리</title>
+   <link rel="stylesheet" href="css/레이아웃.css">
+</head>
+<body>
+   <div>
+      <h2>display 속성의 속성값들</h2>
+      <ul id="display">
+         <li>block</li>
+         <li>inline</li>
+         <li>inline-block</li>
+         <li>none</li>
+      </ul>
+      <p>
+         block: inline 레벨 요소를 block 레벨로 만들어줌<br>
+         inline: block 레벨 요소를 inline 레벨로 만들어줌<br>
+         inline-block: inline 레벨 요소와 block 레벨 요소를 모두 가지게 함<br>
+         ** none: 요소를 화면에 표시하지 않음.
+      </p>
+      <p style="display: none">none</p>
+      <p>display</p>
+      <p style="display: none">none</p>
+      <p>display</p>
+      <p style="display: none">none</p>
+      <p style="display: none">none</p>
+      <p style="display: none">none</p>
+      <p style="display: none">none</p>
+      <p>display: none 처리는 단순히 안 보이는 것이 아닌 아예 화면에 출력하지 않는 것.</p>
+   </div>
+   <div>
+      <h2>float 속성을 이용한 배치</h2>
+      <img src="images/activity.jpg" alt="" style="float: left; margin-right: 10px;">
+      <p style="text-decoration-line: underline;">
+         <span style="color: red; font-weight: bold;">** 참고: </span>
+         float 속성은 clear 속성으로 해제하지 않으면 다음에 오는 객체들도 자동으로 기존의 float 속성이 유지된다.<br>
+         따라서 현재 텍스트 문서도 자동으로 float:left 가 적용되어 있다.
+      </p>
+      <p>어쩌고 저쩌고 얄라리얄라 블라블라 나불나불 킹받는 소리 주구장창1</p>
+      <p>어쩌고 저쩌고 얄라리얄라 블라블라 나불나불 킹받는 소리 주구장창2</p>
+      <p>어쩌고 저쩌고 얄라리얄라 블라블라 나불나불 킹받는 소리 주구장창3</p>
+      <p style="clear: both">
+         여기부터는 float 속성이 사라짐. 참고로, clear 속성의 값은 왼쪽 float를 해제하는 left, 오른쪽 right, 둘다 해제하는 both가 있다.
+      </p>
+   </div>
+   <p></p>
+   <div id="container">
+      <h2>float를 이용한 레이아웃 만들기</h2>
+      <header id="header">
+         헤더
+      </header>
+      <aside id="left_sidebar">
+         왼쪽 사이드 바
+      </aside>
+      <main id="main">
+         본문
+      </main>
+      <aside id="right_sidebar">
+         오른쪽 사이드 바
+      </aside>
+      <footer id="footer">
+         푸터
+      </footer>
+   </div>
+   <div>
+      <h2>웹 요소의 위치 지정하기</h2>
+   </div>
+</body>
+</html>

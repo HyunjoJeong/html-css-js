@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>Form을 통해 입력받기</title>
+   <style>
+      p {
+         border-top: 1px dotted salmon;
+      }
+      legend+p, fieldset+p {
+         border: none;
+      }
+   </style>
+</head>
+<body>
+   <form autocomplete="off">  <!--기본 옵션: on-->
+      <h4>하나의 폼안에서 여러 구역을 나누어 표시할 때 fieldset 태그를 사용한다(legend 태그로 제목을 달 수 있음)</h4>
+      <fieldset>
+         <legend>예시 - 주문자 정보</legend>
+         <p>** 라벨 태그를 이용하면 input 태그의 요소와 레이블 텍스트가 서로 연결된 것을 브라우저가 알 수 있다.</p>
+         <label>이름 <input type="text"></label>
+         <label>전화번호 <input type="tel"></label>
+
+         <label for="user-ref">주소</label>
+         <input type="text" id="user-ref">
+      </fieldset>
+      <p></p>
+      <fieldset>
+         <legend>input 태그 종류 연습</legend>
+         <p>한줄짜리 텍스트 입력을 받는 text</p>
+         <input type="text">
+         <p>비밀번호를 입력받는 password</p>
+         <input type="password">
+         <p>검색할 때 입력받는 search</p>
+         <input type="search">
+         <p>url 주소를 입력받는 url</p>
+         <input type="url">
+         <p>이메일 주소를 입력받는 email</p>
+         <input type="email">
+         <p>전화번호를 입력받는 tel</p>
+         <input type="tel">
+         <p>여러 항목 중 2개 이상을 선택하는 checkbox<br>
+            checkbox나 radio는 value 속성을 필수로 가져야한다.<br>
+            checked 속성을 통해 기본 항목을 정할 수 있다.
+         </p>
+         <input type="checkbox"> 선택지1
+         <input type="checkbox"> 선택지2
+         <input type="checkbox"> 선택지3
+         <p>여러 항목 중 1개만 선택하는 radio<br>
+            같은 name을 지정해줘야 하나만 선택할 수 있음! 주의하자.
+         </p>
+         <input type="radio" name="gift"> 선택지1
+         <input type="radio" name="gift"> 선택지2
+         <input type="radio" name="gift"> 선택지3
+         <p>숫자를 조절할 수 있는 스핀박스</p>
+         <input type="number">
+         <p> value는 초기값을 의미, min max로 범위를 줄 수도 있음. </p>
+         <input type="number" min="0" max="5" value="1">
+         <p>숫자를 조절할 수 있는 슬라이드 막대, min max 필수.</p>
+         <input type="range" min="0" max="5" value="1"> (0~5개)
+         <p>date, month, week, time, datetime, datetime-local 등 시간을 입력받을수도 있음.</p>
+         <p>전송버튼 submit, value 속성을 통해 내부 text를 변경 가능.</p>
+         <input type="submit" value="제출">
+         <p>리셋버튼 reset</p>
+         <input type="reset" value="취소">
+         <p>subimit 버튼 대신 사용하는 이미지 - image; src를 통해 어떤 이미지를 정할지 고를 수 있음.</p>
+         <input type="image" src="images/login.png" alt="">
+         <p>일반 버튼 button, value 속성 사용 가능</p>
+         <input type="button" value="버튼버튼">
+         <p>파일을 첨부할 수 있는 버튼</p>
+         <input type="file">
+         <p>보이지 않는 필드 hidden</p>
+         <input type="hidden" name="이름" value="서버로 넘길 값">
+      </fieldset>
+      <p></p>
+      <fieldset>
+         <legend>ipnut 태그의 주요 속성</legend>
+         <p>autofocus, required, placeholder, readonly</p>
+      </fieldset>
+      <p></p>
+      <fieldset>
+         <legend>input 외에 form에서 사용될 수 있는 태그들</legend>
+         <p>여러줄을 입력받는 텍스트 영역 textarea, cols와 rows로 가로 길이 및 세로 길이를 각각 문자단위, 줄 단위로 입력받음.</p>
+         <textarea cols="60" rows="6" placeholder="가로: 문자 60개, 세로: 줄 6개 크기."></textarea>
+         <p>드롭다운 목록을 만드는 select, option 태그<br>
+            select의 속성: size (화면에 표시할 드롭다운의 개수), multiple (드롭다운 목록에서 둘 이상의 항목을 선택할 때)<br>
+            option의 속성: value (항목 선택시 서버로 넘길 값), selected (기본적으로 선택되어 있는 항목 지정)
+         </p>
+         <select size="4" multiple>
+            <option value="choice1">선택 1</option>
+            <option value="choice2">선택 2</option>
+            <option value="choice3">선택 3</option>
+            <option value="choice4" selected>선택 4</option>
+            <option value="choice5">선택 5</option>
+            <option value="choice6">선택 6</option>
+         </select>
+         <p>데이터 목록을 만들어주는 datalist, option 태그<br>
+            select와 차이점? : input 태그가 같이 있어야하고, id가 연결되어야함.
+         </p>
+         <input type="text" list="datalist">
+         <datalist id="datalist">
+            <option>선택지 1</option>
+            <option>선택지 2</option>
+            <option>선택지 3</option>
+         </datalist>
+         <p>버튼을 만들어주는 button 태그, type 속성의 값으로 submit, reset, button을 사용 가능하다.</p>
+         <button type="submit">제출</button>
+         <button type="reset">초기화</button>
+         <button type="button">버튼</button>
+      </fieldset>
+   </form>
+</body>
+</html>

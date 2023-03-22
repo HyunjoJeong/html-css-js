@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>박스모델</title>
+   <link rel="stylesheet" href="css/박스모델.css">
+</head>
+<body>
+   <div>
+      <h3 style="padding-left: 5px;">div width(content-box영역(default))의 50%(content-box(default))로 설정된 박스 모델.</h3>
+      <p id="content-box">
+         어쩌고 저쩌고 횡성수설 블라 블라 쓸 말이 없는데 그냥 아무거나 쓰는 중 와랄랄랄랄라
+         후루룹쨥 쨥 맛좋은 라면 너무 오래 끓이면 불어서 맛 없어 사과는 맛있는데 바나나도 맛있고
+         바나나는 노랗고 노란 건 진달래, 진달래보단 진돗개.
+      </p>
+   </div>
+   <div>
+      <h3 style="padding-left: 5px;">div width(content-box영역(default))의 50%(border-box)로 설정된 박스 모델.</h3>
+      <p id="border-box">
+         어쩌고 저쩌고 횡성수설 블라 블라 쓸 말이 없는데 그냥 아무거나 쓰는 중 와랄랄랄랄라
+         후루룹쨥 쨥 맛좋은 라면 너무 오래 끓이면 불어서 맛 없어 사과는 맛있는데 바나나도 맛있고
+         바나나는 노랗고 노란 건 진달래, 진달래보단 진돗개.
+      </p>
+   </div>
+   <div id="outer_border-box">
+      <h3 style="padding-left: 5px;">div width(border-box영역)의 50%(border-box)로 설정된 박스 모델.</h3>
+      <p id="border-box">
+         어쩌고 저쩌고 횡성수설 블라 블라 쓸 말이 없는데 그냥 아무거나 쓰는 중 와랄랄랄랄라
+         후루룹쨥 쨥 맛좋은 라면 너무 오래 끓이면 불어서 맛 없어 사과는 맛있는데 바나나도 맛있고
+         바나나는 노랗고 노란 건 진달래, 진달래보단 진돗개.
+      </p>
+   </div>
+   <div id="outer_border-box">
+      <h3 style="padding-left: 5px;">div width(border-box영역)의 50%(content-box(default))로 설정된 박스 모델.</h3>
+      <p id="content-box">
+         어쩌고 저쩌고 횡성수설 블라 블라 쓸 말이 없는데 그냥 아무거나 쓰는 중 와랄랄랄랄라
+         후루룹쨥 쨥 맛좋은 라면 너무 오래 끓이면 불어서 맛 없어 사과는 맛있는데 바나나도 맛있고
+         바나나는 노랗고 노란 건 진달래, 진달래보단 진돗개.
+      </p>
+   </div>
+   <div id="shadow">
+      <h3>박스모델에 그림자 추가</h3>
+      <p>사용법: box-shadow: 오른쪽이동 아래쪽이동 (흐림정도) (번짐정도) 색상 (inset)</p>
+      <p>inset 을 쓰면 그림자가 내부로 들어옴.</p>
+      <p></p>
+   </div>
+   <div>
+      <h3>테두리 스타일 지정</h3>
+      <p>
+         border-style: solid, none, hidden, dotted, dashed, double, groove, inset, outset, ridge 등이 있고, 자세한 건 249페이지 참고.
+      </p>
+      <p id="borderwidth">
+         border-width: 상 우 하 좌 순으로 입력.
+      </p>
+      <p id="borderradius">
+         border의 각 꼭짓점별로 원형을 추가하는 방법:  border-(위치/ ex: top-left)-radius
+      </p>
+   </div>
+</body>
+</html>
