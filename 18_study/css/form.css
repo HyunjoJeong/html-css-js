@@ -1,0 +1,6 @@
+p {
+   border-top: 1px dotted salmon;
+}
+legend+p, fieldset+p {
+   border: none;
+}
