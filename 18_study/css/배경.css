@@ -1,0 +1,54 @@
+div {
+   border: 1px solid black;
+   padding: 5px;
+   margin: 5px;
+}
+#border-box {
+   background-clip: border-box;
+   border: 10px solid rgba(128, 128, 128, 0.582);
+   background-image: url("../images/activity.jpg");
+}
+#padding-box {
+   background-clip: padding-box;
+   border: 10px solid rgba(128, 128, 128, 0.582);
+   background-image: url("../images/activity.jpg");
+}
+#content-box {
+   background-clip: content-box;
+   border: 10px solid rgba(128, 128, 128, 0.582);
+   background-image: url("../images/activity.jpg");
+}
+#image {
+   background-image: url("../images/activity.jpg");
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+#border-box2 {
+   background-origin: border-box;
+   border: 10px solid rgba(128, 128, 128, 0.582);
+   background-image: url("../images/activity.jpg");
+   background-repeat: no-repeat;
+   background-position: right top;
+}
+#padding-box2 {
+   background-origin: padding-box;
+   border: 10px solid rgba(128, 128, 128, 0.582);
+   background-image: url("../images/activity.jpg");
+   background-repeat: no-repeat;
+   background-position: right top;
+}
+#content-box2 {
+   background-origin: content-box;
+   border: 10px solid rgba(128, 128, 128, 0.582);
+   background-image: url("../images/activity.jpg");
+   background-repeat: no-repeat;
+   background-position: right top;
+}
+body {
+   background-image: url("../images/activity.jpg");
+   background-size: 200px auto;
+   background-repeat: no-repeat;
+   background-position: right top;
+   background-attachment: fixed;
+}
+a { color: blue; }

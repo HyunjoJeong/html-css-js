@@ -6,6 +6,67 @@
    <link rel="stylesheet" href="css/배경.css">
 </head>
 <body>
-   
+   <div>
+      <h3>백그라운드의 범위 조정</h3>
+      <p>background-clip 속성을 이용한다.</p>
+      <div id="border-box">
+         <p>border-box</p>
+      </div>
+      <div id="padding-box">
+         <p>padding-box</p>
+      </div>
+      <div id="content-box">
+         <p>content-box</p>
+      </div>
+   </div>
+   <div>
+      <h3>백그라운드 이미지 지정하기</h3>
+      <div id="image">
+         <p>.</p>
+         <p>.</p>
+         <p>
+            background-repeat 속성값을 no-repeat을 해야 반복이 없음<br>
+            만약 x축만 또는 y축만 반복시키고 싶으면 속성값으로 repeat-x 혹은 repeat-y를 쓰고,<br>
+            양축 모두 반복 시키고 싶으면 repeat(default)만 해도 된다.
+         </p>
+         <p>
+            background-position 속성을 쓰면 배경 이미지의 위치를 지정할 수 있다.<br>
+            bakcground-position: <수평위치> <수직위치> 순으로 작성하면 되고,<br>
+            값으로 left, center, right, top, bottom, 백분율값, 길이 값 등을 넣을 수 있다.
+         </p>
+      </div>
+   </div>
+   <div>
+      <h3>백그라운드의 시작위치 설정</h3>
+      <p>
+         background-origin 속성을 이용한다.<br>
+         근데 그냥 background-clip 속성만 써도 되지 않나..<br>
+         그냥 이름 그대로 시작점(기준점)을 바꾼다고 생각하면 될 듯
+      </p>
+      <div id="border-box2">
+         <p>border-box: 시작위치가 border-box를 기준으로</p>
+      </div>
+      <div id="padding-box2">
+         <p>padding-box</p>
+      </div>
+      <div id="content-box2">
+         <p>content-box</p>
+      </div>
+   </div>
+   <div>
+      <h3>화면에 배경사진 고정시켜버리기</h3>
+      <p>
+         background-attachment 속성 이용, 속성값: scroll(default), fixed(를 사용하면 됨)<br>
+         body태그에 연결해 놓았음.
+      </p>
+   </div>
+   <div>
+      <h3>background-size 속성</h3>
+      <p>속성값: cover, contain, auto(원래 사이즈만큼), 크기, 백분율이 있음.</p>
+      <p>cover는 배경 이미지로 요소가 모두 덮히도록 이미지가 확대 or 축소 되고,</p>
+      <p>contain은 배경 이미지가 화면에 딱 한번 온전히 나올 정도로 확대 or 축소됨</p>
+      <p>백분율은 요소의 크기를 기준으로 함.</p>
+      <p>귀찮으니 알아보진 않겠다. 궁금하면 <a href="../09/bg-4.html" target="_blank">여기를 참고.</a></p>
+   </div>
 </body>
 </html>

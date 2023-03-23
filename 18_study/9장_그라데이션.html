@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>그라데이션</title>
+   <link rel="stylesheet" href="css/그라데이션.css">
+</head>
+<body>
+   <div>
+      <h3>linear-gradient</h3>
+      <p>문법 - background: linear-gradient(to (방향 or 각도), (색상 중지점), (색상 중지점), ..)</p>
+      <div id="linear-gradient1"></div>
+      <p> ㄴ방향을 top right 등의 속성을 사용한 예</p>
+      <div id="linear-gradient2"></div>
+      <p> ㄴ방향대신 각도로 표현한 예</p>
+      <p>
+         참고로 % 기호 혹은 px를 사용하면 전체 비율 중 해당 지점에 그 색이 가장 뚜렷함을 의미하는 것.<br>
+         해당 색깔을 그 비율만큼 사용하겠다는 뜻이 아니다.
+      </p>
+   </div>
+   <div>
+      <h3>원형 그라데이션</h3>
+      <p>문법 - background: radial-gradient((모양 크기 at 위치), (색상 중지점), (색상 중지점), ..)</p>
+      <p>
+         모양의 종류는 circle, ellipse(=타원)이 있고, 크기란 그라데이션의 크기를 의미한다.<br>
+         위치는 그라데이션 시작점의 위치를 의미하고, x축 y축 위치를 입력하면 된다. (생략시 center가 기본)<br>
+         구체적으로, 크기의 속성값으로는 (closest, farthest)-(side, corner)가 있고<br>
+         위치는 left right center top bottom, 혹은 백분율값(왼쪽 위 꼭짓점 기준)을 입력하면 된다. (px 값은 지원 안함)
+      </p>
+      <div id="radial-gradient1"></div>
+   </div>
+   <div>
+      <h3>그라데이션을 이용한 패턴 만들기</h3>
+      <p>문법: background: repeating-(linear/radial)-gradient: (각각 동일)</p>
+      <div id="rpt_lin_grad"></div>
+      <div id="rpt_rad_grad"></div>
+   </div>
+</body>
+</html>
