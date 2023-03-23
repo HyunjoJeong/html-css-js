@@ -3,4 +3,24 @@ div {
    margin: 5px;
    padding: 5px;
 }
-a { color: blue; }
+a {
+    color: blue;
+}
+p {
+   border-top: 1px dashed black;
+}
+[class ~= "flat"] {
+   color: red;
+}
+[class |= "fly"] {
+   color: red;
+}
+[class ^= "eng"] {
+   color: red;
+}
+[class $= "end"] {
+   color: red;
+}
+[class *= "file"] {
+   color: red;
+}
