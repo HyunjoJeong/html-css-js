@@ -1,0 +1,1 @@
+document.querySelector("#hi").onclick = () => alert("하이");

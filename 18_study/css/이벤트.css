@@ -1,0 +1,32 @@
+.area {
+   margin: 10px;
+   padding: 10px;
+   border: 1px solid black;
+}
+.emphasis {
+   color: red;
+   font-weight: bold;
+   text-decoration: underline;
+}
+.line {
+   border-bottom: 2px dotted rebeccapurple;
+}
+.type > th {
+   background-color: rgba(128, 128, 128, 0.336);
+}
+table {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+th, td {
+   padding: 5px 15px;
+   border: 1px solid black;
+}
+button {
+   width: 80px;
+   height: 30px;
+   background-color: aliceblue;
+   border: 1px solid rebeccapurple;
+   border-radius: 5px;
+   margin-left: 100px;
+}

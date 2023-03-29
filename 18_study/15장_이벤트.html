@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/이벤트.css">
+   <title>이벤트와 이벤트 처리기</title>
+</head>
+<body>
+   <h1>
+      이벤트와 이벤트 처리기
+   </h1>
+   <div class="area">
+      <h3>이벤트란</h3>
+      <p>
+         이벤트란 <span class="emphasis">웹 문서 영역 안</span>에서만 이루어지는 동작을 의미한다.<br>
+         (따라서, 뒤로 가기 등 브라우저 창 위에서 클릭하는 것은 이벤트가 아니다.)
+      </p>
+      <p class="line"></p>
+      <h4>마우스 이벤트</h4>
+      <table>
+         <tr class="type">
+            <th>종류</th><th>설명</th>
+         </tr>
+         <tr><th>click</th><td>사용자가 html 요소를 클릭할 때 이벤트 발생</td></tr>
+         <tr><th>dblclick</th><td>사용자가 html 요소를 클릭할 때 이벤트 발생</td></tr>
+         <tr><th>mousedown</th><td>사용자가 요소 위에서 마우스 버튼을 눌렀을 때 이벤트 발생</td></tr>
+         <tr><th>mousemove</th><td>사용자가 요소 위에서 마우스 포인터를 움직일 때 이벤트 발생</td></tr>
+         <tr><th>mouseover</th><td>사용자가 요소 위로 마우스 포인터를 옮길 때 이벤트 발생</td></tr>
+         <tr><th>mouseout</th><td>사용자가 마우스 포인터를 요소에서 벗어날 때 이벤트 발생</td></tr>
+         <tr><th>mouseup</th><td>사용자가 요소 위에 놓인 마우스 버튼에서 손을 땔 때 이벤트 발생</td></tr>
+      </table>
+      <p class="line"></p>
+      <h4>키보드 이벤트</h4>
+      <table>
+         <tr class="type">
+            <th>종류</th><th>설명</th>
+         </tr>
+         <tr><th>keydown</th><td>사용자가 키를 누르는 동안 이벤트 발생</td></tr>
+         <tr><th>keypress</th><td>사용자가 키를 눌렀을 때 이벤트 발생</td></tr>
+         <tr><th>keyup</th><td>사용자가 키에서 손을 땔 때 이벤트 발생</td></tr>
+      </table>
+      <p class="line"></p>
+      <h4>문서 로딩 이벤트</h4>
+      <table>
+         <tr class="type">
+            <th>종류</th><th>설명</th>
+         </tr>
+         <tr><th>abort</th><td>문서가 완전히 로딩되기 전 불러오기를 멈췄을 때 이벤트 발생</td></tr>
+         <tr><th>error</th><td>문서가 정확히 로딩되지 않았을 때 이벤트 발생</td></tr>
+         <tr><th>load</th><td>문서 로딩이 끝나면 이벤트 발생</td></tr>
+         <tr><th>resize</th><td>문서 화면 크기가 바뀌었을 때 이벤트 발생</td></tr>
+         <tr><th>scroll</th><td>문서 화면에서 스크롤 되었을 때 이벤트 발생</td></tr>
+         <tr><th>unload</th><td>문서에서 벗어날 때 이벤트 발생</td></tr>
+      </table>
+      <p class="line"></p>
+      <h4>폼 이벤트</h4>
+      <table>
+         <tr class="type">
+            <th>종류</th><th>설명</th>
+         </tr>
+         <tr><th>blur</th><td>폼 요소에 포커스를 잃었을 때 이벤트 발생</td></tr>
+         <tr><th>change</th><td>목록이나 체크 상태 등이 변경되면 이벤트 발생(input, select, textarea 태그에서 사용)</td></tr>
+         <tr><th>focus</th><td>폼 요소에 포커스가 놓였을 때 이벤트 발생(label, select, textarea, button 태그에서 사용)</td></tr>
+         <tr><th>reset</th><td>폼이 리셋되었을 때 이벤트 발생</td></tr>
+         <tr><th>submit</th><td>submit 버튼을 클릭했을 때 이벤트 발생</td></tr>
+      </table>
+   </div>
+   <div class="area">
+      <h3>이벤트 처리기(Event Handler)</h3>
+      <h4>1. html 태그에 직접 연결하는 방법:</h4>
+      <p> - 문법: <태그 on이벤트명 = "함수명"></p>
+      <button onclick="alert('클릭!')">클릭!</button>
+      <button ondblclick="alert('더블클릭!')">더블클릭!</button>
+      <h4>2. DOM을 이용한 이벤트 처리기</h4>
+      <p> - querySelector, querySelectorAll등을 이용해 요소를 연결후 on이벤트명 = 함수;<br>
+          - ex : document.querySelector("#hi").onclick = () => alert("하이");
+      </p>
+      <button id="hi">하이</button>
+      <p>
+         * 참고: document.querySelector("#hi").onclick = alert("하이"); 와 같이 작성하면 브라우저 렌더링시 자동으로 클릭되는 이상한 오류가 있음.(onclick만 그런 듯?)
+      </p>
+   </div>
+   <script src="script/이벤트.js"></script>
+</body>
+</html>
