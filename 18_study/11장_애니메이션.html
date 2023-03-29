@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>CSS 애니메이션</title>
+   <link rel="stylesheet" href="css/애니메이션.css">
+</head>
+<body>
+   <div>
+      <h3>CSS Animation</h3>
+      <p>
+         css animation를 이용하면 자바스크립트를 이용하지 않고도 웹 요소에 애니메이션을 추가할 수 있다.<br>
+         animation 속성은 특정 지점에서 스타일을 바꾸면서 애니메이션을 만드는데, 이런 스타일이 바뀌는 지점을 키프레임이라고 한다.<br>
+         @keyframe을 이용해 키프레임을 정의한 후 animation 속성과 그 하위속성을 이용해 애니메이션의 실행시간이나 반복 여부를 지정한다.
+      </p>
+      <table>
+         <tr id="grey">
+            <th>종류</th><th>설명</th>
+         </tr>
+         <tr>
+            <th>@keyframes</th>
+            <td>
+               애니메이션이 바뀌는 지점을 지정<br>
+               기본형: <br>
+               @keyframes (이름) {<br>
+                  (선택자) { (스타일) }<br>
+               }
+            </td>
+         </tr>
+         <tr>
+            <th>animation-name</th>
+            <td>
+               @keyframes로 설정해 놓은 중간 상태를 지정<br>
+               기본형: animation-name: (키프레임 이름) | none
+            </td>
+         </tr>
+         <tr>
+            <th>animation-delay</th>
+            <td>지연 시간</td>
+         </tr>
+         <tr>
+            <th>animation-direction</th>
+            <td>
+               애니메이션을 종류한 뒤 처음부터 시작할지, 역방향으로 진행할지 지정<br>
+               기본형: animation-direction: normal | reverse | alternate | alternate-reverse<br>
+               <div>
+                  normal(default) : from --> to <br>
+                  reverse : to --> from <br>
+                  alternate : from --> to --> from --> to .. <br>
+                  alternate-reverse : to --> from --> to --> from ..
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <th>animation-duration</th>
+            <td>애니메이션의 실행 시간 지정</td>
+         </tr>
+         <tr>
+            <th>animation-iteration-count</th>
+            <td>
+               애니메이션의 반복 횟수 지정<br>
+               기본형: animation-iteration-count: 숫자 | infinite
+            </td>
+         </tr>
+         
+         <tr>
+            <th>animation-timing-function</th>
+            <td>
+               키프레임의 전환 형태 (효과의 속도 곡선) 지정<br>
+               기본형: animation-timing-function: (transition과 동일)
+            </td>
+         </tr>
+      </table>
+      <div class="box"></div>
+      <div class="box2"></div>
+   </div>
+   
+</body>
+</html>

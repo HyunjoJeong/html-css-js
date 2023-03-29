@@ -1,0 +1,68 @@
+div {
+   border: 1px solid black;
+   width: 900px;
+   margin: 5px auto;
+   padding: 10px;
+}
+#motion a {
+   width: 300px;
+   padding: 10px;
+}
+#motion a:link {
+   background-color: blue;
+   color: white;
+   text-decoration: none;
+}
+#motion a:visited {
+   background-color: red;
+   color: white;
+   text-decoration: none;
+}
+#hover, #active {
+   width: 300px;
+   height: 80px;
+}
+#hover:hover, #active:active, #focus:focus {
+   background-image: url("../images/activity.jpg");
+   background-size: cover;
+}
+.contents {
+   width: 600px;
+   margin: 5px auto;
+   padding: 5px auto;
+}
+#intro:target, #room:target, #reserveNfee:target, #reservation:target {
+   background-color: aqua;
+   color: white;
+}
+#disabled:disabled {
+   background-color: grey;
+}
+input:checked + span {
+   background-color: red;
+}
+#not:not([type="text"]) + span {
+   background-color: red;
+}
+#one {
+   width: 500px;
+   margin: 5px;
+}
+#one h4:only-of-type {
+   color: red;
+}
+#one p:only-of-type {
+   color: red;
+}
+#grammar {
+   line-height: 1.7;
+}
+li.new::after {
+   content: "NEW!";
+   font-size: x-small;
+   padding: 2px 4px;
+   margin: 0px 10px;
+   border-radius: 2px;
+   background: #f00;
+   color: #fff;
+}

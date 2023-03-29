@@ -6,6 +6,127 @@
    <link rel="stylesheet" href="css/가상클래스_가상요소.css">
 </head>
 <body>
-   
+   <div id="motion">
+      <h3>동작에 반응하는 가상 클래스</h3>
+      <p>
+         가상 클래스 선택자는 언제 사용하는 가? <br>
+         - 사용자가 웹 요소를 클릭하거나 마우스 포인터를 올려놓는 등 특정 동작을 할 때 스타일이 바뀌도록 만들 때 쓴다.
+      </p>
+      <p>
+         1. 방문하지 않은 링크에 스타일을 적용하는 :link 가상 클래스 선택자와<br>
+         2. 방문한 링크에 스타일을 적용하는 :visited 가상 클래스 선택자
+      </p>
+      <a href="#">방문했을까?(안 하면 파랑, 했으면 빨강)</a>
+      <p>
+         3. 특정요소에 마우스 포인터를 올려놓으면 스타일을 적용하는 :hover 가상 클래스 선택자
+      </p>
+      <div id="hover"></div>
+      <p>
+         4. 웹 요소를 활성화했을 때 스타일을 적용하는 :active 가상 클래스 선택자<br>
+         - 즉, 링크나 이미지 등 웹 요소를 클릭했을 때 적용.
+      </p>
+      <div id="active"></div>
+      <p>
+         5. 웹요소에 초점이 맞춰져있을 때 스타일을 적용하는 :focus 가상 클래스 선택자<br>
+         - 예를 들어 텍스트필드 안에 마우스 포인터를 올려놓거나, tab 키에 의해 선택되었을 때
+      </p>
+      <textarea id="focus" rows="5"></textarea>
+   </div>
+   <div>
+      <h3>요소 상태에 따른 가상 클래스</h3>
+      <p>
+         1. 앵커 대상에 스타일을 적용하는 :target 가상 클래스 선택자<br>
+         ex: 앵커를 사용해 intro 라는 위치로 링크할 경우 intro 요소의 스타일을 바꾸려면,
+      </p>
+      <nav class="navi">
+         <ul>
+            <li><a href="#intro">이용 안내</a></li>
+            <li><a href="#room">객실 소개</a></li>
+            <li><a href="#reserveNfee">예약 방법 및 요금</a></li>
+            <li><a href="#reservation">예약하기</a></li>
+         </ul>
+      </nav>
+      <div id="intro" class="contents">
+         <h3>이용 안내</h3>
+         <p>어쩌고</p>
+         <p>저쩌고</p>
+      </div>
+      <div id="room" class="contents">
+         <h3>객실 소개</h3>
+         <p>어쩌고</p>
+         <p>저쩌고</p>
+      </div>
+      <div id="reserveNfee" class="contents">
+         <h3>예약 방법 및 요금</h3>
+         <p>어쩌고</p>
+         <p>저쩌고</p>
+      </div>
+      <div id="reservation" class="contents">
+         <h3>예약하기</h3>
+         <p>어쩌고</p>
+         <p>저쩌고</p>
+      </div>
+      <p>
+         2. 요소의 사용 여부에 따라 스타일을 적용하는 :enabled와 :disabled 가상 클래스 선택자<br>
+         ex: textarea를 통해 사용자에게 보여줄 때. 근데 이건 javascript로 disabled or enabled로 만들어줘야함.
+      </p>
+      <textarea id="disabled" cols="30" rows="10">
+         어쩌고 저쩌고
+         얄라리 얄라
+         울랄라
+      </textarea>
+      <p>
+         3. 선택한 항목의 스타일을 적용하는 :checked 가상 클래스 선택자<br>
+         ex: radio 혹은 checkbox
+      </p>
+      <input type="checkbox"><span> 1. 선택?</span><br>
+      <input type="checkbox"><span> 2. 선택?</span><br>
+         <input type="checkbox"><span> 3. 선택?</span><br>
+      <p></p>
+      <input type="radio" name="choose" checked><span> 1. 선택?</span><br>
+      <input type="radio" name="choose"><span> 2. 선택?</span><br>
+      <input type="radio" name="choose"><span> 3. 선택?</span><br>
+      <p>
+         4. 특정 요소를 제외하고 스타일을 적용하는 :not() 가상 클래스 선택자
+         ex: type이 text가 아닌 input만 고르기.
+      </p>
+      <input type="text" id="not"> <span>type: text</span><br>
+      <input type="text" id="not"> <span>type: text</span><br>
+      <input type="tel" id="not"> <span>type: tel</span><br>
+   </div>
+   <div>
+      <h3>구조 가상 클래스</h3>
+      <p id="grammar">
+         그냥 문법만 쓰겠음.. 귀찮다<br>
+         - :only-child = 부모 안에 자식 요소가 하나뿐일 때 '자식' 요소를 선택<br>
+         - A:only-type-of = 부모 안에 A 요소가 하나 뿐일 때 'A' 요소를 선택<br>
+         - :first-child = 부모 안에 있는 모든 요소 중 첫 번째 자식 요소 선택<br>
+         - :last-child =  ~~~~~~~~~~~~~~~~~ 중 마지막 자식 요소 선택<br>
+         - A:first-of-type = 부모 안에 있는 A 요소 중 첫번째 요소 선택<br>
+         - A:last-of-type = 부모 안에 있는 A 요소 중 마지막 요소 선택<br>
+         - :nth-child(n) = 부모 안에 있는 요소 중 n번째 자식 요소 선택<br>
+         ㄴ n자리에 an+b와 같이 수식을 사용할 수도 있으며, 단순히 홀수 짝수 일때는 odd 또는 even 사용 가능, (n은 1부터 시작)<br>
+         - :nth-last-child(n) = 부모안에 있는 요소 중 끝에서 n번째 자식 요소 선택<br>
+         ㄴ 마찬가지로 n 자리에 수식 및 odd, even 가능은 한데 굳이 싶지? ㅎ <br>
+         - A:nth-of-type(n) = 부모 안에 있는 A 요소 중 n 번째 요소 선택<br>
+         - A:nth-last-of-type(n) = 부모 안에 있는 A 요소 중 뒤에서 n 번째 요소 선택.<br>
+         ㄴ 위에 두개도 당연히 n 자리에 수식 및 odd, even 가능.
+      </p>
+   </div>
+   <div>
+      <h3>가상 요소</h3>
+      <p id="grammar">
+         우선, 총 4개가 있음. "::first-line, ::first-letter, ::before, ::after"<br>
+         1. ::first-line, ::first-letter - 요소의 첫번째 줄이나 글자에 스타일 적용.<br>
+          ㄴ 참고할 점은, ::first-letter는 첫번째 '줄'의 첫 글자에만 적용됨.<br>
+         2. ::after, ::before - 내용 앞뒤에 콘텐츠(텍스트, 이미지)를 추가할 수 있음. 밑에 예시로 리스트를 작성해보았음.
+      </p>
+      <ol>
+         <li class="new">제품 A</li>
+         <li>제품 B</li>
+         <li class="new">제품 C</li>
+         <li>제품 D</li>
+      </ol>
+   </div>
 </body>
 </html>

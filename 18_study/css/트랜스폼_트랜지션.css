@@ -1,0 +1,22 @@
+.area {
+   border: 1px solid black;
+   margin: 5px;
+   padding: 5px;
+}
+#box {
+   width: 200px;
+   height: 200px;
+   background-color: aliceblue;
+   border: 1px solid black;
+   transition-property: width, background-color, transform;
+   transition-duration: 2s;
+   transition-timing-function: ease-in-out;
+}
+#box:hover {
+   /* transition-property: width, background-color;
+   transition-duration: 2s;
+   transition-timing-function: ease-in-out; */     /* 여기다 쓰는 게 아니고 #box에 작성 */
+   width: 300px;
+   background-color: hotpink;
+   transform: rotate(180deg);
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/레이아웃2.css">
+   <title>레이아웃2</title>
+</head>
+<body>
+   <div class="area">
+      <h3>그리드 레이아웃</h3>
+      <p>
+         그리드 레이아웃이란 반응형 웹 디자인을 위해 화면 너비에 따라 웹 문서 요소를 재배치할 때 기준이 되는 레이아웃을 의미한다.<br>
+         그리드 레이아웃을 만드는 방법은 일전에 쓴 float 속성을 사용할 수도 있고, 플렉서블 박스 레이아웃이나 그리드 레이아웃으로 적용할 수도 있다.
+      </p>
+   </div>
+   <div class="area">
+      <h3>플렉스(플렉서블) 박스 레이아웃</h3>
+      <p>
+         플렉스 박스 레이아웃은 우선 플렉스 컨테이너(부모 박스)를 생성한 후,<br>
+         수평이나 수직 방향 중 한 쪽을 주축으로 정하여 박스를 배치한다.<br>
+         한 쪽이 주축이면 나머지 축은 교차축이 되고, 플렉스 박스 레이아웃을 적용할 대상들을 플렉스 항목(자식 박스)라고 한다.<br>
+         * 412쪽 그림 참고
+      </p>
+      <p>
+         플렉스 박스 항목을 배치하는 속성은 아래 표와 같다.
+      </p>
+      <table>
+         <tr>
+            <th>종류</th><th>설명</th>
+         </tr>
+         <tr>
+            <td>justify-content</td><td>주축 방향의 정렬 방법</td>
+         </tr>
+         <tr>
+            <td>align-items</td><td>교차축 방향의 정렬 방법</td>
+         </tr>
+         <tr>
+            <td>align-self</td><td>교차축에 있는 개별 항목의 정렬 방법</td>
+         </tr>
+         <tr>
+            <td>align-content</td><td>교차축에서 여러줄로 표시된 항목의 정렬 방법</td>
+         </tr>
+      </table>
+      <h4>
+         플렉스 컨테이너를 지정하는 display 속성
+      </h4>
+      <p>
+         플렉스 박스 레이아웃을 만들려면 먼저 웹 콘텐츠를 플렉스 컨테이너로 묶어주어야 하는데,<br>
+         특정 요소를 플렉스 컨테이너로 만들려면 display 속성을 이용해 속성값을 flex 혹은 inline-flex로 만들어야 한다.<br>
+         * 참고 : 이 속성은 플렉스 항목이 아니라 "플렉스 컨테이너" 요소(부모 박스)에 지정하는 것이다.
+      </p>
+      <table>
+         <tr>
+            <th>flex</th><td>컨테이너 안의 플렉스 항목을 블록 레벨 요소로 배치</td>
+         </tr>
+         <tr>
+            <th>inline-flex</th><td>컨테이너 안의 플렉스 항목을 인라인 레벨 요소로 배치</td>
+         </tr>
+      </table>
+      <h4>
+         플렉스 방향을 지정하는 flex-direction 속성
+      </h4>
+      <p>
+         * display 속성과 마찬가지로 부모 박스에 지정한다.
+      </p>
+      <table>
+         <tr>
+            <th>row</th><td>주축을 가로로 지정, 왼쪽에서 오른쪽으로 배치(default)</td>
+         </tr>
+         <tr>
+            <th>row-reverse</th><td>주축을 가로로 지정, 오른쪽에서 왼쪽으로 배치</td>
+         </tr>
+         <tr>
+            <th>column</th><td>주축을 세로로 지정, 위에서 아래로 배치</td>
+         </tr>
+         <tr>
+            <th>column-reverse</th><td>주축을 세로로 지정, 아래에서 위로 배치</td>
+         </tr>
+      </table>
+      <h4>예시</h4>
+      <div id="container1">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+      </div>
+      <div id="container2">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+      </div>
+      <div id="container3">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+      </div>
+      <div id="container4">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+      </div>
+      <h4>플렉스 항목의 줄을 바꾸는 flex-wrap 속성</h4>
+      <p>
+         플렉스 컨테이너 너비보다 많은 플렉스 항목이 있을 경우 줄을 바꿀지 여부를 지정한다.<br>
+         속성값은 아래와 같다.
+      </p>
+      <table>
+         <tr>
+            <th>nowrap</th><td>플렉스 항목을 한 줄에 표시(default)</td>
+         </tr>
+         <tr>
+            <th>wrap</th><td>플렉스 항목을 여러 줄에 표시</td>
+         </tr>
+         <tr>
+            <th>wrap-reverse</th><td>플렉스 항목을 여러 줄에 표시하되, 시작점과 끝점이 바뀜</td>
+         </tr>
+      </table>
+      <div id="container5">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container6">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container7">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <h4>
+         배치 방향과 줄 바꿈을 한번에 지정하는 flex-flow 속성
+      </h4>
+      <p>
+         ex: flex-flow: row wrap;
+      </p>
+      <div id="container8">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <h4>
+         주축 정렬 방법을 지정하는 justify-content 속성
+      </h4>
+      <p>속성값은 아래와 같다.</p>
+      <table>
+         <tr>
+            <th>flex-start</th><td>주축의 시작점에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>flex-end</th><td>주축의 끝점에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>center</th><td>주축의 중앙에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>space-between</th><td>첫 번째 항목과 끝 항목을 주축의 시작점과 끝점에 배치하고, 나머지를 같은 간격으로 배치</td>
+         </tr>
+         <tr>
+            <th>space-around</th><td>모든 항목을 주축에 같은 간격으로 배치</td>
+         </tr>
+      </table>
+      <div id="container9">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container10">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container11">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container12">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container13">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <h4>
+         교차 축 정렬 방법을 지정하는 align-items 속성
+      </h4>
+      <p>속성값은 아래와 같다.</p>
+      <table>
+         <tr>
+            <th>flex-start</th><td>교차축의 시작점에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>flex-end</th><td>교차축의 끝점에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>center</th><td>교차축의 중앙에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>baseline</th><td>교차축의 문자 기준선에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>stretch</th><td>플렉스 항목을 늘려 교차축에 가득 차게 배치</td>
+         </tr>
+      </table>
+      <div id="container14">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container15">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container16">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container17">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         <div class="box">4</div>
+         <div class="box">5</div>
+         <div class="box">6</div>
+      </div>
+      <div id="container18">
+         <div class="box2">1</div>
+         <div class="box2">2</div>
+         <div class="box2">3</div>
+         <div class="box2">4</div>
+         <div class="box2">5</div>
+         <div class="box2">6</div>
+      </div>
+      <h4>
+         특정항목의 정렬 방법을 지정하는 algin-self 속성
+      </h4>
+      <p>
+         대충 느낌 오겠지만, align-self 속성은 부모 박스가 아닌 자식 박스에서 지정하는 속성이다.<br>
+         속성값은 align-items와 동일하게, flex-start | flex-end | center | baseline | stretch
+      </p>
+      <div id="container16">
+         <div class="box2" id="self1">1</div>
+         <div class="box2" id="self2">2</div>
+         <div class="box2" id="self3">3</div>
+         <div class="box2" id="self4">4</div>
+         <div class="box2" id="self5">5</div>
+      </div>
+      <h4>
+         여러 줄일 때 교차 축 정렬 방법을 지정하는 align-content 속성
+      </h4>
+      <p>속성값은 아래와 같다.</p>
+      <table>
+         <tr>
+            <th>flex-start</th><td>교차축의 시작점에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>flex-end</th><td>교차축의 끝점에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>center</th><td>교차축의 중앙에 맞춰 배치</td>
+         </tr>
+         <tr>
+            <th>space-between</th><td>첫 번째 항목과 끝 항목을 교차축의 시작점과 끝점에 배치하고, 나머지를 같은 간격으로 배치</td>
+         </tr>
+         <tr>
+            <th>space-around</th><td>모든 항목을 교차축에 같은 간격으로 배치</td>
+         </tr>
+         <tr>
+            <th>stretch</th><td>플렉스 항목을 늘려 교차축에 가득 차게 배치</td>
+         </tr>
+      </table>
+      <div id="container20">
+         <div class="box2">1</div>
+         <div class="box2">2</div>
+         <div class="box2">3</div>
+         <div class="box2">4</div>
+         <div class="box2">5</div>
+      </div>
+      <div id="container21">
+         <div class="box2">1</div>
+         <div class="box2">2</div>
+         <div class="box2">3</div>
+         <div class="box2">4</div>
+         <div class="box2">5</div>
+      </div>
+      <div id="container22">
+         <div class="box2">1</div>
+         <div class="box2">2</div>
+         <div class="box2">3</div>
+         <div class="box2">4</div>
+         <div class="box2">5</div>
+      </div>
+      <div id="container23">
+         <div class="box2">1</div>
+         <div class="box2">2</div>
+         <div class="box2">3</div>
+         <div class="box2">4</div>
+         <div class="box2">5</div>
+      </div>
+      <div id="container24">
+         <div class="box2">1</div>
+         <div class="box2">2</div>
+         <div class="box2">3</div>
+         <div class="box2">4</div>
+         <div class="box2">5</div>
+      </div>
+      <div id="container25">
+         <div class="box2">1</div>
+         <div class="box2">2</div>
+         <div class="box2">3</div>
+         <div class="box2">4</div>
+         <div class="box2">5</div>
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+div {
+   margin: 5px;
+   padding: 10px;
+   border: 1px solid black;
+}
+table {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+td, th {
+   border: 1px solid black;
+   padding: 5px 10px;
+   text-align: center;
+}
+.header>th {
+   background-color: rgba(128, 128, 128, 0.473);
+}
+caption {
+   margin-bottom: 10px;
+   font-weight: bold;
+   font-size: large;
+   color: rgb(3, 209, 82);
+}
+#vp_unit {
+   border-radius: 1vw;
+   padding: 1vw;
+}
